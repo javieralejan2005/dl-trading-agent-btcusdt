@@ -29,3 +29,5 @@ Thumbs.db
 .vscode/
 # Claude Code (configuración personal local)
 .claude/settings.local.json
+*.egg-info/
+build/

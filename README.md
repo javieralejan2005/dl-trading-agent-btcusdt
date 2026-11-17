@@ -33,7 +33,9 @@ _Pendiente: Claude Code completará estos pasos en la Fase 10._
 - Ruta de órdenes reales **inexistente**, con prueba automatizada.
 
 ## Pendientes
-_Se llenará durante el desarrollo._
+- `npm audit` reporta vulnerabilidades en `picomatch`, una dependencia transitiva **solo de desarrollo** (vite/vitest); no se incluye en el build. Pendiente actualizar cuando el proyecto original publique la corrección.
+- Aviso de deprecación de Starlette sobre `httpx` en `TestClient` (solo en pruebas).
+- Confirmar con el profesor el uso de Vue en lugar de React.
 
 ## Licencia
 MIT — ver `LICENSE`.
