@@ -1,0 +1,31 @@
+# Secretos y entorno
+.env
+.env.*
+!.env.example
+# Datos y estado local
+*.db
+*.sqlite
+*.sqlite3
+logs/
+data/*
+!data/.gitkeep
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# Node
+node_modules/
+dist/
+.vite/
+coverage/
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+# Claude Code (configuración personal local)
+.claude/settings.local.json

@@ -1,0 +1,12 @@
+simbolo: BTCUSDT
+intervalo: 1d
+ventana_rendimientos: 20       # contrato del modelo (Avance 1)
+ejecucion: apertura_t+1        # señal al cierre de t, ejecución en la apertura de t+1
+margen_tras_cierre_min: 5      # minutos de espera tras el cierre UTC de la vela
+llm:
+  reintentos_json: 2
+  timeout_s: 30
+  acciones_permitidas: [comprar, mantener, vender]
+mexc:
+  reintentos: 4
+  espera_inicial_s: 1          # backoff exponencial: 1, 2, 4, 8 s

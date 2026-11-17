@@ -1,0 +1,11 @@
+# Controles de riesgo DETERMINISTAS. El LLM no puede leer ni modificar este archivo.
+# Definir estos valores ANTES de la prueba y no cambiarlos después de ver resultados.
+capital_inicial: 50000        # USDT
+costo_por_operacion: 0.0      # fracción; MEXC spot tiene 0 % de comisión (configurable)
+apalancamiento: false
+ventas_en_corto: false
+max_exposicion_pct: 100       # % máximo del patrimonio en BTC
+perdida_diaria_max_pct: 5     # al alcanzarla se bloquean nuevas órdenes
+antiguedad_max_dato_horas: 36 # dato más viejo que esto => no decidir
+stop_policy: hold             # hold | liquidate  (qué ocurre al pulsar Detener)
+deslizamiento_supuesto_pct: 0 # documentar el supuesto si se cambia
