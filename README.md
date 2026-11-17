@@ -1,5 +1,7 @@
 # Agente de trading BTC/USDT (Paper) — MEXC · Ollama · Vue
 
+[![CI](https://github.com/javieralejan2005/dl-trading-agent-btcusdt/actions/workflows/ci.yml/badge.svg)](https://github.com/javieralejan2005/dl-trading-agent-btcusdt/actions/workflows/ci.yml)
+
 > ⚠️ **Solo simulación (Paper).** No envía órdenes reales, no es asesoría financiera. Proyecto académico de Deep Learning para Finanzas.
 
 _Estado: **v1 en desarrollo — Fase 1 de 10 completada** (esqueleto + CI). Ver [`PLAN_V1.md`](PLAN_V1.md)._
@@ -14,8 +16,8 @@ Un agente que observe velas diarias **cerradas** de BTC/USDT de **MEXC** (solo d
 |---|---|
 | Backend FastAPI con `GET /api/salud` (responde `modo: PAPER`) | ✅ con prueba (pytest) |
 | Frontend Vue 3 + TS + Vite + Pinia con etiqueta **PAPER** fija | ✅ con prueba (vitest) |
-| Linters: ruff + mypy estricto (backend), oxlint + eslint + vue-tsc (frontend) | ✅ `make lint` en verde en local |
-| GitHub Actions (backend y frontend) | ⏳ definido; ver Pendientes |
+| Linters: ruff + mypy estricto (backend), oxlint + eslint + vue-tsc (frontend) | ✅ `make lint` en verde (local y CI) |
+| GitHub Actions (backend y frontend) | ✅ en verde en GitHub (lint + pruebas + build) |
 | Configuración de riesgo y agente (`config/*.yaml`) | Solo archivos de configuración; aún no se usan |
 
 ## Arquitectura planeada
@@ -85,7 +87,6 @@ Si `python3.12` no está en tu PATH: `make setup PYTHON=/ruta/a/python3.12`.
 - El código actual no contiene ningún cliente ni ruta de órdenes. La prueba automatizada que lo demuestra está planeada (ver DoD en `PLAN_V1.md`).
 
 ## Pendientes
-- **CI sin ejecutar todavía**: el workflow de GitHub Actions se ejecutará por primera vez al publicar el repositorio.
 - **Vue vs React**: el protocolo del curso pide React + TS; **por confirmar con el profesor**. Si exige React, solo cambia `frontend/`.
 - **`npm audit`** reporta vulnerabilidades en `picomatch`, dependencia transitiva **solo de desarrollo** (vite/vitest); no se incluye en el build.
 - **Aviso de deprecación de Starlette** sobre `httpx` en `TestClient` (solo en pruebas).
