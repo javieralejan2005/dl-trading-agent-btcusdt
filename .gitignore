@@ -27,7 +27,10 @@ coverage/
 Thumbs.db
 .idea/
 .vscode/
-# Claude Code (configuración personal local)
-.claude/settings.local.json
+# Archivos locales del asistente (no se versionan)
+.claude/
+CLAUDE.md
+INICIO_CLAUDE_CODE.md
+PROMPT_INICIAL.md
 *.egg-info/
 build/
